@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="root" prefHeight="650.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="controller.ExpController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#HandleBackBtn" text="Sim" />
+            <MenuItem mnemonicParsing="false" onAction="#HandleMenuBtn" text="Menu" />
+                  <MenuItem mnemonicParsing="false" onAction="#HandleExitBtn" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#HandleGuideBtn" text="User Guide" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox prefHeight="625.0" prefWidth="1000.0" spacing="10.0">
+               <children>
+                  <ScrollPane fitToWidth="true">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" style="-fx-background-color: white;">
+                           <children>
+                              <VBox fillWidth="false" prefHeight="200.0" prefWidth="903.0" spacing="20.0">
+                                 <children>
+                                    <Label text="Explanation">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Light demonstrate both behaviors of a particle and of a wave. The double slit experiment, first done in 1801 by Thomas Young, proves the theory that light, in form of small particles called photons, can act as a wave, much like radio waves or sound waves. To understand how this experiment works, we must understand what the components of a wave are. All waves have crests and troughs, which are the highest and lowest part of the wave. The wavelength, is the distance between 2 crests or 2 troughs." wrappingWidth="888.2707023620605">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Text>
+                                    <ImageView fitHeight="233.0" fitWidth="443.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/exppic1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="In the double-slit experiment, a light source produces light which shines onto 2 slits in a plate. This splits the wave into two separate waves. On the other side of the plate, these waves interfere to cause an interference pattern on a screen. Interference is the effect of adding two waves together. When these interfere at the crest or the trough, they create a higher wave, emitting more light. When a crest meets a trough, they cancel each other out. In this area there will be no light. These two cases are called constructive and destructive interference, respectively." wrappingWidth="880.2707633972168">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fitHeight="248.0" fitWidth="647.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/exppic2.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="In our simulation, you will be able to see the crests, which are formed by circles coming out of the slits. Whenever these collide, there is constructive interference." wrappingWidth="879.8263664245605">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Single-slit diffraction goes hand in hand with the double-slit interference, and is another property of waves. Waves bend around obstacles on microscopic scales. When sent through slit, rays of light are sent in every direction. The rays at the top and the bottom of the slit create an interference pattern that quickly diminishes in intensity as we get further from the center. When doing the double-slit test, we can notice that single-slit diffraction is also happening because it is also just slits. This is why purely double-slit characteristics and the actual real world result differ." wrappingWidth="887.3817253112793">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

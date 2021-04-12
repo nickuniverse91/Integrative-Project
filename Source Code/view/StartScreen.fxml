@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="root" prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StartController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="617.0" prefWidth="1000.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+      <children>
+          <Button fx:id="button" layoutX="315.0" layoutY="200.0" mnemonicParsing="false" onAction="#HandleStartBtn" prefHeight="80.0" prefWidth="370.0" style="-fx-background-color: lightgray; -fx-background-radius: 30;" text="Start" textOverrun="LEADING_WORD_ELLIPSIS">
+               <font>
+                  <Font name="Serif Bold" size="40.0" />
+               </font>
+            </Button>
+            <Button layoutX="314.0" layoutY="298.0" mnemonicParsing="false" onAction="#HandleGuideBtn" prefHeight="80.0" prefWidth="368.0" style="-fx-background-color: lightgray; -fx-background-radius: 30;" text="User Guide" textOverrun="LEADING_WORD_ELLIPSIS">
+               <font>
+                  <Font name="Serif Bold" size="40.0" />
+               </font>
+            </Button>
+             <Button layoutX="316.0" layoutY="401.0" mnemonicParsing="false" onAction="#HandleExpBtn" prefHeight="80.0" prefWidth="368.0" style="-fx-background-color: lightgray; -fx-background-radius: 30;" text="Explanation" textOverrun="LEADING_WORD_ELLIPSIS">
+               <font>
+                  <Font name="Serif Bold" size="40.0" />
+               </font>
+            </Button>
+            <Button layoutX="313.0" layoutY="513.0" mnemonicParsing="false" onAction="#HandleExitBtn" prefHeight="80.0" prefWidth="370.0" style="-fx-background-color: lightgrey; -fx-background-radius: 30;" text="Exit" textOverrun="LEADING_WORD_ELLIPSIS">
+               <font>
+                  <Font name="Serif Bold" size="40.0" />
+               </font>
+            </Button>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e2e2e2" height="99.0" layoutX="-2.0" layoutY="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1037.0" />
+            <Text layoutX="75.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Single and Double Slit Pattern Simulation" textAlignment="CENTER" wrappingWidth="900.5752792358398">
+               <font>
+                  <Font name="Arial Bold" size="45.0" />
+               </font>
+            </Text>
+            <Text layoutX="873.0" layoutY="574.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Created by: Diego Castillo, Matthew Meyer,  Nicholas Piperni" wrappingWidth="90.20571899414062" />
+           
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

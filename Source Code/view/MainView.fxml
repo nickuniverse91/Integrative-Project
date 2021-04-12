@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import view.*?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+          <menus>
+              <Menu mnemonicParsing="false" text="File">
+                  <items>
+                      <MenuItem mnemonicParsing="false" onAction="#SaveButtonHandler" text="Save" />
+                      <MenuItem mnemonicParsing="false" onAction="#HandleMenuBtn" text="Menu" />
+                      <MenuItem mnemonicParsing="false" onAction="#HandleExitBtn" text="Quit" />
+                  </items>
+              </Menu>
+              <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                      <MenuItem mnemonicParsing="false" onAction="#HandleGuideBtn" text="User Guide" />
+                      <MenuItem mnemonicParsing="false" onAction="#HandleExpBtn" text="Explanation" />
+                  </items>
+              </Menu>
+          </menus>
+      </MenuBar>
+   </top>
+   <right>
+      <VBox prefHeight="502.0" prefWidth="268.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="wavelengthLabel" text="Wavelength: nm" />
+            <Slider fx:id="wavelengthSlider" max="700.0" min="300.0" value="300.0" />
+            <Label fx:id="slitDistanceLabel" text="Distance between slits: µm" />
+            <Slider fx:id="slitDistanceSlider" max="75.0" min="25.0" value="25.0" />
+            <Label fx:id="screenDistanceLabel" text="Distance between slits and screen: m" />
+            <Slider fx:id="screenDistanceSlider" max="3.0" min="1.2" value="3.0" />
+            <Label fx:id="slitWidthLabel" text="Slit width: µm" />
+            <Slider fx:id="slitWidthSlider" max="20.0" min="10.0" value="10.0" />
+            <RadioButton fx:id="singleSlitButton" mnemonicParsing="false" text="Single Slit" />
+            <RadioButton fx:id="doubleSlitButton" mnemonicParsing="false" selected="true" text="Double Slit" />
+            <Button mnemonicParsing="false" onAction="#animationButtonHandler" text="Animate" textFill="#11a600">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="40.0" left="10.0" top="40.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label text="Graph Options:" underline="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <CheckBox mnemonicParsing="false" onAction="#YInterferenceHandler" selected="true" text="Y interference" />
+            <CheckBox mnemonicParsing="false" onAction="#YDiffractionHandler" selected="true" text="Y diffraction" />
+            <CheckBox mnemonicParsing="false" onAction="#YTogetherHandler" selected="true" text="Y together" />
+         </children>
+         <BorderPane.margin>
+            <Insets right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+   <center>
+       <Pane>
+         <SubScene height="302.0" layoutX="27.0" layoutY="14.0" width="502.0">
+           <root>
+             <SimulationView fx:id="simulationArea" layoutX="1" layoutY="1" />
+           </root>
+         </SubScene>
+           <GraphUI fx:id="graphArea" layoutX="27.0" layoutY="345.0" prefHeight="250" prefWidth="500" />
+       </Pane>
+   </center>
+</BorderPane>
