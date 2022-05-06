@@ -1,3 +1,2 @@
-# Vanier Integrative-Project
-# Wave Optics Simulator
+# Vanier Integrative-Project Wave Optics Simulator
 Requires JavaFx
